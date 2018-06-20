@@ -14,12 +14,12 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class RegisterServiceImpl implements RegisterService {
 
-    @Autowired
-    private RestTemplate restTemplate;
-
-    @Override
-    public String getProductById() {
-        ResponseEntity<String> responseEntity= restTemplate.getForEntity("http://spring-abs-product/product/getProduct",String.class);
-        return responseEntity.getBody();
-    }
+//    @Autowired
+//    private RestTemplate restTemplate;
+//
+//    @Override
+//    public String getProductById() {
+//        ResponseEntity<String> responseEntity= restTemplate.getForEntity("http://spring-abs-product/product/getProduct",String.class);
+//        return responseEntity.getBody();
+//    }
 }

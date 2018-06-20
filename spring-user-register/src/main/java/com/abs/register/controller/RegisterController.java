@@ -29,12 +29,12 @@ public class RegisterController {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }*/
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
         return "eeeeyyyy"+serverPort;
     }
 
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
-    public String login(){
-        return registerService.getProductById()+"**serverPort"+serverPort;
-    }
+//    @RequestMapping(value = "/login",method = RequestMethod.GET)
+//    public String login(){
+//        return registerService.getProductById()+"**serverPort"+serverPort;
+//    }
 }

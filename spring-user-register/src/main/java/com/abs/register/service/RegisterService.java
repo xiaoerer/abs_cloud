@@ -7,6 +7,6 @@ package com.abs.register.service;
  **/
 public interface RegisterService {
 
-    String getProductById();
+//    String getProductById();
 
 }

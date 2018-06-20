@@ -16,9 +16,9 @@ public class RegisterApplication {
         SpringApplication.run(RegisterApplication.class, args);
     }
 
-    @Bean
-    @LoadBalanced   //这个注解做负载均衡
-    RestTemplate restTemplate(){
-        return new RestTemplate();
-    }
+//    @Bean
+//    @LoadBalanced   //这个注解做负载均衡
+//    RestTemplate restTemplate(){
+//        return new RestTemplate();
+//    }
 }

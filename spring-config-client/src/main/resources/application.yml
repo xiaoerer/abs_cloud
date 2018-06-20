@@ -1,0 +1,13 @@
+#配置消息总线--start
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+spring:
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+#配置消息总线--end

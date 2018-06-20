@@ -2,6 +2,7 @@ package com.abs.springabsproduct.controller;
 
 import com.abs.springabsproduct.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +25,7 @@ public class OrderController {
 
     }
 
-    @RequestMapping(value = "/test2",method = RequestMethod.GET)
+    @GetMapping(value = "/test2")
     public String getTest2(){
         return "product测试";
     }

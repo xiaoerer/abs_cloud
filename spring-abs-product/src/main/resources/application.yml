@@ -1,0 +1,28 @@
+
+spring:
+  application:
+    name: spring-abs-product
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.227:3306/awb?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+    username: root
+    password: mysql123
+server:
+  port: 1112
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1110/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spring-abs-order
+server:
+  port: 1120
+#  tomcat:
+#    max-threads: 50
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1110/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+
+#hystrix.metrics.enabled=true
+#management.endpoint.hystrix.stream.enabled=true
+
+#hystrix.metrics.polling-interval-ms=4000
+
+
+
+

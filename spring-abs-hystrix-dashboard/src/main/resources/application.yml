@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-abs-hystrix-dashboard
+server:
+  port: 1121
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1110/eureka/
+
