@@ -1,9 +1,40 @@
 spring:
   application:
     name: spring-abs-feign
+#  sleuth:
+#    web:
+#      client:
+#        enabled: true
+#    sampler:
+#      probability: 1.0  # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+#  zipkin:
+#    base-url: http://localhost:9411/  # 指定了 Zipkin 服务器的地址
+
 server:
   port: 1130
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:1110/eureka/
+      defaultZone: http://xiaoer:123456@peer1:1110/eureka/,http://xiaoer:123456@peer2:1210/eureka/,http://xiaoer:123456@peer3:1310/eureka/
+#      defaultZone: http://peer1:1110/eureka/,http://peer2:1210/eureka/,http://peer3:1310/eureka/
+#      defaultZone: http://xiaoer:123456@peer1:1110/eureka/
+#      defaultZone: http://spring-eureka-server:1110/eureka/
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ipAdd}
+#        defaultZone: http://peer1:1110/eureka/,http://peer2:1210/eureka/,http://peer3:1310/eureka/
+
+
+
+
+
+#turbine:
+###turbine.app-config指定了要收集监控信息的服务名
+#  app-config: spring-abs-feign
+#  ##turbine.cluster-name-expression 指定集群名称
+#  cluster-name-expression: new String("default")
+#  ##使同一主机上的多个服务实例可以通过主机名和端口号的组合来进行区分
+#  combine-host-port: true
+#management:
+#  server:
+#    port: 1130

@@ -1,6 +1,7 @@
 package com.abs.springabsorder.controller;
 
 import com.abs.springabsorder.service.MemberFeign;
+import com.abs.springabsorder.service.ToFeignService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,9 @@ public class MemberController {
     @Autowired
     private MemberFeign memberFeign;
 
+    @Autowired
+    private ToFeignService toFeignService;
+
     @GetMapping(value = "/getToOrderMemberAll")
     @HystrixCommand(fallbackMethod="listUsersByRibbonFallback")
     public String getToOrderMemberAll(){
@@ -32,6 +36,17 @@ public class MemberController {
     @GetMapping(value = "/test")
     public String test(){
         return "test success";
+    }
+
+    @GetMapping(value = "/test6")
+    @HystrixCommand(fallbackMethod="test6ByFeignFallback")
+    public String test6(){
+        System.out.println("order fegin 工程调用feign工程");
+        return toFeignService.test6();
+    }
+
+    public String test6ByFeignFallback(){
+        return "test6ByFeignFallback，端口：";
     }
 
     /*@RequestMapping(value = "/getToOrderMemberOne")

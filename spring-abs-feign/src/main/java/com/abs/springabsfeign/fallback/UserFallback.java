@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
  * @description:
  * @date: Created in 20:25 2018/6/14
  **/
-@Component
+//@Component
 public class UserFallback implements UserFeignClient {
 
-    @Override
-    public String test2() {
-        return "服务调用失败";
-    }
+//    @Override
+//    public String test2() {
+//        return "服务调用失败";
+//    }
 }

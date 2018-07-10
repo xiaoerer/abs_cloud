@@ -37,8 +37,8 @@ public class CORSFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;
-//        return false; //默认
+//        return true;
+        return false; //默认
     }
 
     @Override

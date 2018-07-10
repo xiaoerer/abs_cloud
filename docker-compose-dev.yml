@@ -1,0 +1,13 @@
+version: '3'
+services:
+  spring-eureka-server:
+    image: xiaoer/spring-eureka-server
+    restart: always
+    ports:
+      - 1110:1110
+
+  spring-abs-feign:
+    image: xiaoer/spring-abs-feign
+    restart: always
+    ports:
+      - 1130:1130

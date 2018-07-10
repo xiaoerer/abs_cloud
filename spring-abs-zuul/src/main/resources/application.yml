@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spring-abs-zuul
+server:
+  port: 1115
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaoer:123456@peer1:1110/eureka/,http://xiaoer:123456@peer2:1210/eureka/,http://xiaoer:123456@peer3:1310/eureka/
+zuul:
+  routes:
+    api-product:
+      path: /api-product/** #\u6CE8\u610F\u8FD9\u91CC\u8DDF\u4E0B\u9762\u7684\u8981\u54E6\u901A\u8FC7api-? \u5206\u5F00 \u8FD9\u91CC\u662Fapi-a
+      serviceId: spring-abs-product  #api-a
+
+    api-user:
+      path: /api-user/**  #\u6CE8\u610F\u8FD9\u91CC\u8DDF\u4E0B\u9762\u7684\u8981\u54E6\u901A\u8FC7api-? \u5206\u5F00 \u8FD9\u91CC\u662Fapi-b
+      serviceId: eureka-client-register  #api-b
+#    \u7981\u7528\u6307\u5B9A\u7684 Filter
+#  CORSFilter:
+#    pre:
+#      disable: true
+
+security:
+  oauth2:
+    sso:
+      login-path: http://localhost:1140/authentication/require
+

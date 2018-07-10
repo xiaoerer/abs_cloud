@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
  * @description:
  * @date: Created in 14:25 2018/6/20
  **/
-@Component
+//@Component
 public class UserFeignOrderClientFallback implements UserFeignOrderClient {
-    @Override
-    public String test() {
-        return "错误";
-    }
+//    @Override
+//    public String test() {
+//        return "错误";
+//    }
 }

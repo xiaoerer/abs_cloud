@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @description:
  * @date: Created in 20:07 2018/6/14
  **/
-@FeignClient(name = "spring-abs-product", fallback=UserFallback.class)
+//@FeignClient(name = "spring-abs-product", fallback=UserFallback.class)
 public interface UserFeignClient {
 
-    @GetMapping(value = "/test2")
-    public String test2();
+//    @GetMapping(value = "/test2")
+//    public String test2();
 }

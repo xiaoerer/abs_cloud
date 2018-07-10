@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @description:
  * @date: Created in 14:24 2018/6/20
  **/
-@FeignClient(name = "spring-abs-order", fallback=UserFallback.class)
+//@FeignClient(name = "spring-abs-order", fallback=UserFallback.class)
 public interface UserFeignOrderClient {
 
-    @GetMapping(value = "/test")
-    public String test();
+//    @GetMapping(value = "/test")
+//    public String test();
 
 }

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-zipkin-server
+#  zipkin:
+#    base-url: http://localhost:1137/zipkin/
+server:
+  port: 1137
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1110/eureka/

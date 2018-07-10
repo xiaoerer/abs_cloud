@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: spring-eureka-server
+  security:
+    user:
+      name: xiaoer
+      password: 123456
+  profiles:
+    active: peer3
+
+server:
+  port: 1310
+
+eureka:
+  instance:
+    hostname: peer3  #修改前
+    instance-id: ${spring.application.name}:${server.port}
+#    prefer-ip-address: true  #修改后
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#      defaultZone: http://localhost:${server.port}/eureka/
+#      defaultZone: http://xiaoer:123456@peer1:1110/eureka/,http://xiaoer:123456@peer2:1210/eureka/
+#      defaultZone: http://xiaoer:123456@peer1:1110/eureka/,http://xiaoer:123456@peer2:1210/eureka/
+#       defaultZone: http:/peer1:1110/eureka/,http://peer2:1210/eureka/
+      defaultZone: http://xiaoer:123456@peer1:1110/eureka/,http://xiaoer:123456@peer2:1210/eureka/,http://xiaoer:123456@peer3:1310/eureka/
+  server:
+    enable-self-preservation: true    #生产时,需要打开,也就是设置为true,
